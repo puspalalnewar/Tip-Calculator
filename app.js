@@ -8,13 +8,13 @@ let b = tip.value;
 
 // console.log(a * b);
 
-function add(x, y){
-    console.log(x+y);
+function calcTip(){
+    let billVal = bill.value;
+    let tipVal = tip.value;
+    let totalVal = billVal * (+tipVal / 100);
+    result.innerHTML = `Total Bill : ${totalVal}`;
 }
-add(a, b);
 
-btn.addEventListener("click", ()=>{
-    add(a, b);
-})
+btn.addEventListener("click", calcTip);
 
 
